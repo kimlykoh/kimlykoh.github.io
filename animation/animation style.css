@@ -1,0 +1,209 @@
+.square {
+    height: 50px;
+    width: 50px;
+    background: pink;
+    position: relative;
+    animation-name: pingPong;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes pingPong {
+    0%{
+        left: 0px;
+    }
+    50%{
+        left: 500px;
+    }
+    100%{
+        left: 0px;
+    }
+    0%{
+        background: pink;
+    }
+    50%{
+        background: lightblue;
+    }
+    70%{
+        background: lightyellow;
+    }
+    100%{
+        background: pink;
+    }
+}
+
+.yellow-square {
+    height: 50px;
+    width: 50px;
+    background: yellow;
+    position: relative;
+    animation-duration: 6s;
+    animation-name: basketball;
+    animation-iteration-count: infinite;
+}
+
+@keyframes basketball {
+    0%{
+        background: lightgreen;
+        top: 0px;
+    }
+    50%{
+        background: burlywood;
+        top: 500px;
+    }
+    100%{
+        background: whitesmoke; 
+        top: 0px;
+    }
+
+}
+
+.circle{
+    height: 100px;
+    width: 100px;
+    background: green;
+    border-radius: 50%;
+    animation-name: circle;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    }
+
+@keyframes circle {
+    0%{
+        background: green;
+        width: 0px;
+        height:0px;
+    }
+    50%{
+        background: red;
+        width: 500px;
+        height: 500px;
+    }
+    100%{
+        background: whitesmoke; 
+        width: 0px;
+        height: 0px;
+    }
+
+}
+
+.purple-box {
+    height: 50px;
+    width: 50px;
+    background: plum;
+    position: relative;
+    animation-name: sideToSide;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes sideToSide{
+    0%{
+        left: 0px;
+    }
+    50%{
+        left: 500px;
+    }
+    100%{
+        left: 0px;
+    }
+    0%{
+        background:lightcoral;
+    }
+    50%{
+        background: lightsalmon;
+    }
+    70%{
+        background: lightyellow;
+    }
+    100%{
+        background:lightcoral;
+    }
+ }
+
+ .gold-box {
+    height: 50px;
+    width: 50px;
+    background: gold;
+    position: relative;
+    animation-name: against;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    }
+
+@keyframes against{
+    0%{
+        left : 500px;
+    }
+    50%{
+        left: 0px;
+    }
+    100%{
+        left : 500px;
+    }
+    0%{
+        background:turquoise;
+    }
+    50%{
+        background: lightblue;
+    }
+    70%{
+        background: plum;
+    }
+    100%{
+        background: turquoise;
+    }
+ }
+
+ .blue-box {
+     height: 50px;
+     width: 50px;
+     background: blue;
+     position: relative;
+     animation-name: sideToSide;
+     animation-duration: 6s;
+     animation-iteration-count: infinite;
+ }
+
+ .black-box {
+    height: 50px;
+    width: 50px;
+    background: black;
+    position: relative;
+    animation-name: sideToSide;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    
+}
+
+ .square-box {
+     height: 50px;
+     width: 50px;
+     position: relative;
+
+ }
+
+ .orange-box {
+    height: 50px;
+    width: 50px;
+    background: orange;
+    position: relative;
+    animation-name: against;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    
+}
+
+ .black-box {
+    height: 50px;
+    width: 50px;
+    background: black;
+    position: relative;
+    animation-name: sideToSide;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    
+}
+

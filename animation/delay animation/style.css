@@ -1,0 +1,103 @@
+.pretty-box {
+    height: 50px;
+    width: 50px;
+    background: plum;
+}
+
+.ugly-box {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    animation-name: sideToSide;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes sideToSide{
+    0%{
+        left: 0px;
+    }
+    50%{
+        left: 500px;
+    }
+    100%{
+        left: 0px;
+    }
+    0%{
+        background:lightpink;
+    }
+    50%{
+        background:plum;
+    }
+    70%{
+        background:lightgoldenrodyellow;
+    }
+    100%{
+        background:lightpink;
+    }
+ }
+
+ .annoying-box {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    animation-name: against;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    }
+
+@keyframes against{
+    0%{
+        left : 500px;
+    }
+    50%{
+        left: 0px;
+    }
+    100%{
+        left : 500px;
+    }
+    0%{
+        background:lightgreen;
+    }
+    50%{
+        background:turquoise;
+    }
+    70%{
+        background: lightskyblue;
+    }
+    100%{
+        background:lightgreen;
+    }
+ }
+
+ .asian-box {
+    height: 50px;
+    width: 50px;
+    background: black;
+    position: relative;
+    animation-name: sideToSide;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+ }
+
+ .short-box {
+    height: 50px;
+    width: 50px;
+    background: gold;
+    position: relative;
+    animation-name: against;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    }
+
+
+ .dumb-box {
+     height: 50px;
+     width: 50px;
+     background: blue;
+     position: relative;
+     animation-name: sideToSide;
+     animation-duration: 6s;
+     animation-iteration-count: infinite;
+ }
