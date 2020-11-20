@@ -1,0 +1,194 @@
+.title {
+    text-align: center;
+    font-size: 23px;
+    background-color: rgb(9, 159, 9);
+    padding: 5px;
+}
+
+.nav-bar {
+    text-align: center;
+    font-size: 22px;
+    padding: 10px;
+    box-shadow: 0px 5px 5px 0px black;
+}
+
+.links{
+    color: black;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* filter: brightness(300%); */
+}
+
+
+.links:hover {
+    color: gray;
+   
+}
+
+.banner {
+    background-image:linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.1)), url("https://foodyoushouldtry.com/wp-content/uploads/2017/02/malaysian-food.jpg");
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.banner-text{
+    text-align: center;
+    padding-top: 150px;
+    font-size: 1.3rem;
+}
+
+.banner-button{
+    border: 2px solid white;
+    background-color: crimson;
+    color: white;
+    animation-name: appear;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
+
+.section-title{
+    text-align: center;
+    flex: 100%;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.column{
+   flex: 25%;
+   padding: 10px;
+}
+
+.column > div{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3);
+    transition: 0.2s;
+}
+
+.square-img{
+    object-fit: cover;
+    height: 300px;
+    width: 300px;
+}
+
+.column >div:hover{
+    transform: scale(0.9);
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.6);
+}
+
+.padded-heading{
+    padding: 10px;
+}
+
+/* 
+.padded-heading{
+    padding: 10px;
+} */
+
+.recipe-button {
+    text-decoration-line: none;
+    border: 2px solid black;
+    /* padding-right: 5px;
+    padding-left: 5px; */
+    padding: 1px 5px 1px 5px ;
+    background-color: orange;
+    color: white;
+    width: 100px;
+    transition: 0.4s;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+}
+
+.recipe-button:hover{
+    transform: scale(1.2);
+   
+}
+
+footer{
+    background-color: lightblue;
+}
+
+.footer-column{
+    /* border: 2px solid black; */
+    margin-right: 400px;
+    display: block;
+    padding: 50px;
+}
+
+.inputs{
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+
+.recipe-details{
+    padding-right: 400px;
+    padding-left: 400px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.recipe-text{
+    padding-left: 3px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+@media (max-width:1000px){
+    .recipe-details{
+        padding-right: 200px;
+        padding-left: 200px;
+    }
+}
+
+@media (max-width:600px) {
+    .footer-column{
+        flex: 100%;
+        text-align: center;
+        margin-right: 0px;
+    }
+    .recipe-details{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+
+.recipe-card{
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3);
+    transition: 0.5s;
+}
+
+.recipe-card:hover{
+    transform: scale(1.05);
+    
+}
+
+.curry-puff-banner{
+    background-image:linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.1)), url("https://www.bearnakedfood.com/wp-content/uploads/2017/05/DSCF5813-1-1200x800.jpg");
+    height: 40vh;
+}
