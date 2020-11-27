@@ -25,9 +25,9 @@
             <div class="banner">
                 <div class="banner-text">
                     <h2>
-                    Malaysian Food
+                    Malaysian Cuisine
                     </h2>
-                    <a href="" class="banner-button links">More Food</a>
+                    <a onclick="greetings()" class="banner-button links" id="">More Food</a>
                 </div>
             </div>
 
@@ -36,6 +36,9 @@
                 <h1 class="section-title">
                     Appetizer
                 </h1>
+                <p class="section-title" id="temp">
+                    
+                </p>
                    <article class="column">
                        <div>
                            <img src="https://1.bp.blogspot.com/-4SZ-uPQIWN8/USoNzdL_iRI/AAAAAAAACw4/5J1o3l1FGew/s1600/IMG_0774.JPG" width="100%" class="square-img">
@@ -43,11 +46,19 @@
                                <h2>
                                    Curry Puff
                                </h2>
+                            
+                               <select name="curry-puff" id="curry-puff-recipe" onchange="curryPuffOptions()">
+                                   <option value="Vegetarian">Vegetarian</option>
+                                   <option value="Vegan">Vegan</option>
+                                   <option value="Meat">Meat</option>
+                               </select>
+                            
                                <p>
                                     Deep Fried Pastries Filled With Meat
                                </p>
-                               <a href="curry-puff.html" class="recipe-button">Read Recipe</a>
-
+                               <a href="meat-curry-puff.html" class="recipe-button" id="curry-puff-recipe-button">Read Meat Recipe</a>
+                              
+                               
                            </div>
                        </div>
                    </article>
