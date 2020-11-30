@@ -158,14 +158,14 @@ footer{
     padding-bottom: 2px;
 }
 
-@media (min-width:1000px){
+@media (max-width:1000px){
     .recipe-details{
         padding-right: 200px;
         padding-left: 200px;
     }
 }
 
-@media (min-width:400px) {
+@media (max-width:400px) {
     .footer-column{
         flex: 100%;
         text-align: center;
