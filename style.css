@@ -20,6 +20,9 @@
     /* filter: brightness(300%); */
 }
 
+h2{
+    color: pink;
+}
 
 .links:hover {
     color: gray;
@@ -104,6 +107,7 @@
 .padded-heading{
     padding: 10px;
 } */
+
 
 .recipe-button {
     text-decoration-line: none;
