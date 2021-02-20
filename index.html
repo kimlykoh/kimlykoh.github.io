@@ -1,248 +1,146 @@
-<html>
-    <head>
-        <title>
-            Kimly Restaurant
-        </title>
-        <link href="style.css" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+<!DOCTYPE html>
+<html lang="en">
 
-    <body>
-        <header class="title">
-            <h1>
-                Kimly's Exquisite Cooking 
-                <img src="restaurant logo.png" width="60px" class="logo">
-            </h1>
-            
-        </header>
-        <nav class="nav-bar">
-            <a href="#Appetizer" class="links" > Appetizers</a>
-            <a href="#Entree" class="links"> Entrees </a>
-            <a href="#Dessert" class="links"> Desserts</a>
-            <a href="#contact" class="links"> Contact</a>
-        </nav>
-        <main>
-        
-            <div class="banner">
-                <div class="banner-text">
-                    <h2>
-                    Malaysian Cuisine
-                    </h2>
-                    <a onclick="greetings()" class="banner-button links" id="">More Food</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+   
+</head>
+
+<body>
+    <header>
+        <h1>Header</h1>
+    </header>
+    <nav>
+        <a href="" style="color: green">Home</a>
+        <a href="" style="color: green">About</a>
+        <a href="" style="color: green">Foods</a>
+        <a href="" style="color: green" id="total">Cart: </a>
+    </nav>
+    <main>
+        <!-- 1)make sure each element in the banner section have their own id 
+             2)we need a function changeBannerText() and inside of the {} we put document.getelementbyid("nameOfId").textContent=""; because we want to change the text
+             3)put onclick inside the opening button tag-->
+       <div class="bannerImg">
+           <div class="bannerText">
+               <h1 class="title">welcome to denny's</h1>
+               <p>im hungry</p>
+               <button class="clickme" >serve me!</button>
+           </div>
+       </div>
+        <section class="row">
+            <article class="column column1">
+                <div>
+                    <img src="dish1.jpeg" 
+                        alt="" width="100%" id="kimchiImg" class="images">
+                    <div class="desc">
+                        <h2 id="title">Kimchi</h2>
+                        <p id="desc">some text...</p>
+                        <p>$<span id="price1">1</span></p>
+                        <button onclick="changeImg('kimchiImg','kimchi.jpg')" class="nextButton">next</button>
+                        <button onclick="addToCart(1)" class="ATCbutton">add to cart</button>
+                    </div>
                 </div>
-            </div>
-
-             
-            <section id="Appetizer" class="row">
-                <h1 class="section-title">
-                    Appetizer
-                </h1>
-                <p class="section-title" id="temp">
-                    
-                </p>
-                   <article class="column">
-                       <div>
-                           <img src="https://1.bp.blogspot.com/-4SZ-uPQIWN8/USoNzdL_iRI/AAAAAAAACw4/5J1o3l1FGew/s1600/IMG_0774.JPG" width="100%" class="square-img">
-                           <div class="padded-heading">
-                               <h2>
-                                   Curry Puff
-                               </h2>
-                            
-                               <select name="curry-puff" id="curry-puff-recipe" onchange="curryPuffOptions()">
-                                   <option value="Vegetarian">Vegetarian</option>
-                                   <option value="Vegan">Vegan</option>
-                                   <option value="Meat">Meat</option>
-                               </select>
-                            
-                               <p>
-                                    Deep Fried Pastries Filled With Meat
-                               </p>
-                               <a href="vegetarian-curry-puff.html" class="recipe-button" id="curry-puff-recipe-button">Read Vegetarian Recipe</a>
-                               
-                              
-                               
-                           </div>
-                       </div>
-                   </article>
-                   <article class="column">
-                        <div>
-                            <img src="https://cdn.tasteatlas.com/images/dishes/40249dab4d684626b23e5400b53e0b77.jpg?w=600&h=450" width="100%" class="square-img">
-                            <div class="padded-heading">
-                                <h2>
-                                    Otak Otak
-                                </h2>
-                            
-                                <p>
-                                    Grilled fish cake made of ground fish meat mixed with tapioca starch and spices.
-                                </p>
-                                <a href="" class="recipe-button">Read Recipe</a>
-                            </div>
-                        </div>
-                   </article>
-                   <article class="column">
-                    <div>
-                        <img src="https://che-cheh.com/messy/wp-content/uploads/2014/04/My%20Favorite%20Satay%20@%20Sate%20Kajang%20Haji%20Samuri%20Restaurant,%20Kajang%201.jpg" width="100%" class="square-img">
-                        <div class="padded-heading">
-                            <h2>
-                                Satay
-                            </h2>
-                            <select name="satay" id="satay-recipe" onchange="satayOptions()">
-                                <option value="Chicken">Chicken</option>
-                                <option value="Beef">Beef</option>
-                                <option value="Lamb">Lamb</option>
-                            </select>
-                            <p id="satay-desc"> 
-                                Chicken Skewer
-                            </p>
-                            <a href="chicken-satay.html" class="recipe-button" id="satay-recipe-button">Read Chicken Recipe</a>
-                        </div>
+            </article>
+            <article class="column column2">
+                <div>
+                    <img src="dish 2.jpeg"
+                         alt="" width="100%" id="pizzaImg" class="images">
+                    <div class="desc">
+                        <h2 id="title2">Column</h2>
+                        <p id="desc2">some text...</p>
+                        <p>$<span  id="price2">2</span></p>
+                        <button onclick="changeImg('pizzaImg','pizza.jpg')" class="nextButton">next</button>
+                        <button onclick="addToCart(2)" class="ATCbutton">add to cart</button>
                     </div>
-                   </article>
-               </section>   
-               
-          
-               
-               <section id="Entree" class="row">
-                <h1 class="section-title">
-                    Entree
-                </h1>
-                   <article class="column">
-                       <div>
-                           <img src="https://omnivorescookbook.com/wp-content/uploads/2019/12/1911_Beef-Rendang_550-500x375.jpg" width="100%" class="square-img">
-                           <div class="padded-heading">
-                               <h2>
-                                    Beef Rendang
-                               </h2>
-                               <p>
-                                    Slow cooked and braised in a coconut milk and spice mixture, well until the liquids evaporate and the meat turns dark brown and tender, becoming caramelized and infused with rich spices.
-                               </p>
-                               <a href="" class="recipe-button">Read Recipe</a>
-
-                           </div>
-                       </div>
-                   </article>
-                   <article class="column">
-                        <div>
-                            <img src="https://www.seriouseats.com/2019/06/20190604-nasi-goreng-fried-rice-vicky-wasik-7.jpg" width="100%" class="square-img">
-                            <div class="padded-heading">
-                                <h2>
-                                    Nasi Goreng
-                                </h2>
-                                <p>
-                                    Sweet soy sauce rice dish with pieces of meat and vegetables added. 
-                                </p>
-                                <a href="" class="recipe-button">Read Recipe</a>
-                            </div>
-                        </div>
-                   </article>
-                   <article class="column">
-                    <div>
-                        <img src="https://i.pinimg.com/564x/c8/fd/57/c8fd57920dcb2c1a70c6589891f5a4fb.jpg" width="100%" class="square-img">
-                        <div class="padded-heading">
-                            <h2>
-                                Nasi Lemak
-                            </h2>
-                            <p>
-                                Fragrant rice cooked in coconut milk and pandan leaf.
-                            </p>
-                            <a href="" class="recipe-button">Read Recipe</a>
-                        </div>
+                </div>
+            </article>
+            <article class="column column3">
+                <div>
+                    <img src="dish 3.jpg"
+                        width="100%" id="sushiImg" class="images">
+                    <div class="desc">
+                        <h2 id="title3">Column</h2>
+                        <p id="desc3">some text...</p>
+                        <p>$<span  id="price3">3</span></p>
+                        <button onclick="changeImg('sushiImg','sushi.jpg')" class="nextButton">next</button>
+                        <button onclick="addToCart(3)" class="ATCbutton">add to cart</button>
                     </div>
-                   </article>
-               </section>
-
-
-               <section id="Dessert" class="row">
-                <h1 class="section-title">
-                    Dessert
-                </h1>
-                   <article class="column">
-                       <div>
-                           <img src="images/kueh.png" width="100%" class="square-img">
-                           <div class="padded-heading">
-                               <h2>
-                                    Kueh
-                               </h2>
-                               <p>
-                                    Different varieties of steamed savoury/sweet cake made from pieces of taro
-                               </p>
-                               <a href="" class="recipe-button">Read Recipe</a>
-
-                           </div>
-                       </div>
-                   </article>
-                   <article class="column">
-                        <div>
-                            <img src="images/abc.jpg" width="100%" class="square-img">
-                            <div class="padded-heading">
-                                <h2>
-                                    Abc
-                                </h2>
-                                <p>
-                                    Shaved ice with choices of toppings
-                                </p>
-                                <a href="" class="recipe-button">Read Recipe</a>
-                            </div>
-                        </div>
-                   </article>
-                   <article class="column">
-                    <div>
-                        <img src="images/bubur cha cha.jpg" width="100%" class="square-img">
-                        <div class="padded-heading">
-                            <h2>
-                                Bubur Cha Cha
-                            </h2>
-                            <p>
-                                Bubur cha cha a medley of sweet potatoes , yam , black-eye peas, etc., cooked in a sweet coconut milk base
-                            </p>
-                            <a href="" class="recipe-button">Read Recipe</a>
-                        </div>
+                </div>
+            </article>
+            <article class="column column4" >
+                <div>
+                    <img src="dish4.jpg"
+                        alt="" width="100%" id="steakImg" class="images">
+                    <div class="desc">
+                        <h2 id="title4">Column</h2>
+                        <p id="desc4">some text...</p>
+                        <p>$<span id="price4">4</span></p>
+                        <button onclick="changeImg('steakImg','steak.jpg')" class="nextButton">next</button>
+                        <button onclick="addToCart(4)" class="ATCbutton">add to cart</button>
                     </div>
-                   </article>
-                   <article class="column">
-                    <div>
-                        <img src="https://www.curiouscuisiniere.com/wp-content/uploads/2019/05/Cendol-1.450.jpg" width="100%" class="square-img">
-                        <div class="padded-heading">
-                            <h2>
-                                Cendol
-                            </h2>
-                            <p>
-                                An iced sweet dessert/drinks that contains droplets of green rice flour jelly, coconut milk and palm sugar syrup
-                            </p>
-                            <a href="" class="recipe-button">Read Recipe</a>
-                        </div>
+                </div>
+            </article>
+            <article class="column column5" >
+                <div >
+                    <img src="dish5.jpg" alt="" width="100%" id="eggImg" class="images">
+                    <div class="desc">
+                        <h2 id="title5">Column</h2>
+                        <p id="desc5">some text...</p>
+                        <p>$<span id="price5">5</span></p>
+                        <button onclick="changeImg('eggImg','egg.jpg')" class="nextButton">next</button>
+                        <button onclick="addToCart(5)" class="ATCbutton">add to cart</button>
                     </div>
-                   </article>
-               </section>
-
-               
-
-
+                </div>
+            </article>
             
-        </main>
-        <footer>
-            <section class="row">
-                <article class="footer-column">
-                    <a>logo</a>
-                    <p>description</p>
-                    <a>blog</a>
-                    <p>reviews</p>
-                </article>
-                <article class="footer-column" id="contact" >
-                 
-                    <input type="text" placeholder="Full Name" id="firstName" class="inputs">
-                 
-                    <input type="email" placeholder="Email" id="email" class="inputs">
-                 
-                    <textarea placeholder="leave a comment" id="comment" class="inputs"></textarea>
-                
-                    <input type="button" value="Submit" onclick="saveMessage()" class="inputs">
-
-                </article>
-            </section>
-        </footer>
-        <script src="script.js">
-        </script>
-    </body>
+        </section>
+    </main>
+    <footer>
+        <section class="row">
+            <article class="footer-columns">
+                <p>
+                    <a href="">Logo</a>
+                </p>
+                <p>
+                    <a onclick="transform()">Change</a>
+                </p>
+            </article>
+            <article class="footer-columns">
+                <p>
+                    <a href="">Blogs</a>
+                </p>
+                <p>
+                    <a href="">Review</a>
+                </p>
+            </article>
+            <article class="footer-columns">
+                <p>
+                    <a href="">Link 1</a>
+                </p>
+                <p>
+                    <a href="">Link 2</a>
+                </p>
+            </article>
+            <article class="footer-columns" style="margin-top: 10px;">
+                <input type="text" id="dish" placeholder="Column">
+                <br>
+                <input type="text" id="description" placeholder="Some Text">
+                <br>
+                <input type="text" id="imageLink" placeholder="image link">
+                <br>
+                <input type="text" id="imageLink2" placeholder="second image link">
+                <br>
+                <input type="text" id="price" placeholder="price">
+                <br>
+                <button onclick="submit()">submit</button>
+            </article>
+        </section>
+    </footer>
+    <script src="script.js">
+    </script>
+</body>
 
 </html>

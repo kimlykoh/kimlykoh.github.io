@@ -1,36 +1,88 @@
-var firstName="";
-var email="";
-var comment="";
-var option=""; 
 
 
-function saveMessage(){
-   firstName=document.getElementById("firstName").value;
-   email=document.getElementById("email").value;
-   comment=document.getElementById("comment").value;
-   console.log(firstName);
-   console.log(email);
-   console.log(comment);
-    }
+var dish="";
+var description="";
+var price=""
+var imageLink="";
+var imageLink2="";
 
+var pricey=0;
+var costs= "cost: ";
+var prices= "price: ";
+var convertedCosts= "convertedCost: ";
 
-function curryPuffOptions(){
-   option=document.getElementById("curry-puff-recipe").value;
-   document.getElementById("curry-puff-recipe-button").textContent="Read " + option + " Recipe";
-   document.getElementById("curry-puff-recipe-button").setAttribute("href", option + "-curry-puff.html" )
+var number=3;
+var number2=1;
+var sum=0;
+
+function transform() {
+document.getElementById("title").textContent="Kimchi";
+document.getElementById("title2").textContent="Pizza";
+document.getElementById("title3").textContent="Sushi";
+document.getElementById("title4").textContent="Steak";
+document.getElementById("title5").textContent="Egg";
+document.getElementById("desc").textContent="Spicy Pickled Cabbage";
+document.getElementById("desc2").textContent="Vegetarian Pizza";
+document.getElementById("desc3").textContent="Green Sushi";
+document.getElementById("desc4").textContent="Filet Mignon";
+document.getElementById("desc5").textContent="Cheesy Egg";
+}
+
+function changeImg(imgId, imgSrc) {
+    document.getElementById(imgId).setAttribute("src", imgSrc);
 }
 
 
-function satayOptions(){
-   option=document.getElementById("satay-recipe").value;
-   document.getElementById("satay-recipe-button").textContent="Read " + option + " Recipe";
-   document.getElementById("satay-recipe-button").setAttribute("href", option + "-satay.html" )
-   document.getElementById("satay-desc").textContent=option + " Skewer";
+function submit() {
+    
+    dish=document.getElementById("dish").value;
+    description=document.getElementById("description").value;
+    price=document.getElementById("price").value;
+    imageLink=document.getElementById("imageLink").value;
+    imageLink2=document.getElementById("imageLink2").value;
+    document.getElementById("title6").textContent=dish;
+    document.getElementById("desc6").textContent=description;
+    document.getElementById("price6").textContent=price;
+    document.getElementById("img6").setAttribute("src", imageLink);
+    document.getElementById("button6").setAttribute("onclick", "changeImg('img6', '"+ imageLink2 +"')");
+   
+    // document.getElementById('button6').addEventListener ('click', function(){
+    //     changeImg('img6',   imageLink2  ) 
+    // })
+   
+    
 }
 
-document.getElementById("temp").textContent="Kimly's Creation";
-document.getElementById("firstName").setAttribute("placeholder","First Name")
-function greetings(){
-   document.getElementById("temp").textContent="Authentic Malaysian Appetizer";
+
+
+function addToCart(idNumber) {
+    var cost=0;
+    var convertedCost=0;
+    cost=document.getElementById("price" + idNumber).textContent;
+    convertedCost=Number(cost);
+    pricey=pricey+convertedCost;
+    console.log(costs + cost);
+    console.log(prices + pricey);
+    console.log(convertedCosts + convertedCost);
+    document.getElementById("total").textContent="Cart: $" + pricey;
+   }
+
+function changeBannerText() {
+    document.getElementById("firstText").textContent="Welcome to Wendy's";
+    document.getElementById("secondText").textContent="im starving";
+    document.getElementById("thirdText").textContent="give me food";
 }
 
+
+console.log(10);
+console.log(number);
+number = 17;
+console.log(number);
+sum = number + number2;
+console.log(sum);
+sum = number + 3;
+console.log(sum);
+
+console.log("hi")
+
+document.getElementById("firstText").textContent=""
