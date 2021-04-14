@@ -9,9 +9,9 @@
    
 </head>
 
-<body>
+<body onscroll="showSecondSection()">
     <header>
-        <h1>Header</h1>
+        <h1>The Melt's</h1>
     </header>
     <nav>
         <a href="" style="color: green">Home</a>
@@ -20,18 +20,19 @@
         <a href="" style="color: green" id="total">Cart: </a>
     </nav>
     <main>
-        <!-- 1)make sure each element in the banner section have their own id 
-             2)we need a function changeBannerText() and inside of the {} we put document.getelementbyid("nameOfId").textContent=""; because we want to change the text
-             3)put onclick inside the opening button tag-->
        <div class="bannerImg">
            <div class="bannerText">
-               <h1 class="title">welcome to denny's</h1>
+               <h1 class="title">welcome to Melt's</h1>
                <p>im hungry</p>
-               <button class="clickme" >serve me!</button>
+               <button class="clickme">serve me!</button>
            </div>
        </div>
-        <section class="row">
-            <article class="column column1">
+    
+        <section class="row" id="appetizerSection">
+            <h1 class="section-title fadeIn">
+                Appetizer
+            </h1>
+            <article class="column column1" id="dishArticle1">
                 <div>
                     <img src="dish1.jpeg" 
                         alt="" width="100%" id="kimchiImg" class="images">
@@ -44,7 +45,7 @@
                     </div>
                 </div>
             </article>
-            <article class="column column2">
+            <article class="column column2" id="dishArticle2">
                 <div>
                     <img src="dish 2.jpeg"
                          alt="" width="100%" id="pizzaImg" class="images">
@@ -57,7 +58,7 @@
                     </div>
                 </div>
             </article>
-            <article class="column column3">
+            <article class="column column3" id="dishArticle3">
                 <div>
                     <img src="dish 3.jpg"
                         width="100%" id="sushiImg" class="images">
@@ -70,21 +71,26 @@
                     </div>
                 </div>
             </article>
-            <article class="column column4" >
+        </section>
+        <section class="row" id="dessertSection">
+            <h1 class="section-title" id="dessertTitle">
+                Dessert
+            </h1>
+            <article class="column column4" id="dishArticle4">
                 <div>
                     <img src="dish4.jpg"
                         alt="" width="100%" id="steakImg" class="images">
                     <div class="desc">
                         <h2 id="title4">Column</h2>
                         <p id="desc4">some text...</p>
-                        <p>$<span id="price4">4</span></p>
+                        <p>$<span id="price4">40</span></p>
                         <button onclick="changeImg('steakImg','steak.jpg')" class="nextButton">next</button>
                         <button onclick="addToCart(4)" class="ATCbutton">add to cart</button>
                     </div>
                 </div>
             </article>
-            <article class="column column5" >
-                <div >
+            <article class="column column5" id="dishArticle5">
+                <div>
                     <img src="dish5.jpg" alt="" width="100%" id="eggImg" class="images">
                     <div class="desc">
                         <h2 id="title5">Column</h2>
@@ -95,7 +101,60 @@
                     </div>
                 </div>
             </article>
-            
+            <article class="column column6" id="dishArticle6">
+                <div >
+                    <img src="https://i1.wp.com/theverybesttop10.com/wp-content/uploads/2015/05/Top-10-Crazy-and-Unusual-Square-Foods-10-510x498.jpg?resize=600%2C586" alt="" width="100%" id="potatoImg" class="images">
+                    <div class="desc">
+                        <h2 id="title6">Column</h2>
+                        <p id="desc6">some text...</p>
+                        <p>$<span id="price6">6</span></p>
+                        <button onclick="changeImg('potatoImg','puffPastry.jpg')" class="nextButton">next</button>
+                        <button onclick="addToCart(6)" class="ATCbutton">add to cart</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="row" id="drinksSection">
+            <h1 class="section-title" id="drinksTitle">
+                Drinks
+            </h1>
+            <article class="column column7" id="dishArticle7">
+                <div>
+                    <img src="dish4.jpg"
+                        alt="" width="100%" id="steakImg" class="images">
+                    <div class="desc">
+                        <h2 id="title7">Column</h2>
+                        <p id="desc7">some text...</p>
+                        <p>$<span id="price7">40</span></p>
+                        <button onclick="changeImg('steakImg','steak.jpg')" class="nextButton">next</button>
+                        <button onclick="addToCart(7)" class="ATCbutton">add to cart</button>
+                    </div>
+                </div>
+            </article>
+            <article class="column column8" id="dishArticle8">
+                <div >
+                    <img src="dish5.jpg" alt="" width="100%" id="eggImg" class="images">
+                    <div class="desc">
+                        <h2 id="title8">Column</h2>
+                        <p id="desc8">some text...</p>
+                        <p>$<span id="price8">8</span></p>
+                        <button onclick="changeImg('eggImg','egg.jpg')" class="nextButton">next</button>
+                        <button onclick="addToCart(8)" class="ATCbutton">add to cart</button>
+                    </div>
+                </div>
+            </article>
+            <article class="column column9" id="dishArticle9">
+                <div >
+                    <img src="https://i1.wp.com/theverybesttop10.com/wp-content/uploads/2015/05/Top-10-Crazy-and-Unusual-Square-Foods-10-510x498.jpg?resize=600%2C586" alt="" width="100%" id="potatoImg" class="images">
+                    <div class="desc">
+                        <h2 id="title9">Column</h2>
+                        <p id="desc9">some text...</p>
+                        <p>$<span id="price9">9</span></p>
+                        <button onclick="changeImg('potatoImg','puffPastry.jpg')" class="nextButton">next</button>
+                        <button onclick="addToCart(9)" class="ATCbutton">add to cart</button>
+                    </div>
+                </div>
+            </article>
         </section>
     </main>
     <footer>

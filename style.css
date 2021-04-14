@@ -23,7 +23,7 @@
         .column {
             flex: 33%;
             padding: 10px;
-           
+            opacity: 0;
         }
 
         .column>div {
@@ -132,31 +132,49 @@
             margin: 5px;
         }
 
-        .column1{
-            flex: 33%;
-            padding: 10px;
-        }
-
-        .column2{
-            flex: 33%;
-            padding: 10px;
-        }
-
-        .column3{
-            flex: 33%;
-            padding: 10px;
-        }
-
-        .column4{
-            flex: 33%;
-            padding: 10px;
-        }
-
-        .column5{
-            flex: 33%;
-            padding: 10px;
-        }
 
         .desc{
             padding: 2px 20px;
+        }
+
+        .fadeInLeft{
+            position: relative;
+            animation-name: fadeLeftAnimation;
+            animation-duration: 3s;
+            animation-delay: 1s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeLeftAnimation{
+            0%{
+                opacity:0;
+                left: -1000px;
+            }
+            100%{
+                opacity:1;
+                left:0px;
+            }
+        }
+
+        .section-title{
+            text-align: center;
+            opacity: 0;
+            flex: 100%;
+        }
+
+        .fadeIn{
+            opacity: 0;
+            animation-name: fadeInAnimation;
+            animation-duration: 4s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeInAnimation{
+            0%{
+                opacity:0;
+            }
+            100%{
+                opacity:1;
+            }
         }
